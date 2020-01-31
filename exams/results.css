@@ -1,0 +1,26 @@
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid white;
+}
+
+div {
+  min-height: 20px;
+}
+
+.fail {
+  background-color: red;
+}
+
+.soso {
+  background-color: blue;
+}
+
+.succ {
+  background-color: green;
+}
+
+.none
+
