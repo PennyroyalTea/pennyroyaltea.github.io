@@ -1,13 +1,40 @@
-<!DOCTYPE html>
-<html>
 
 <head>
-	<title>Just a little bit of testing</title>
+	<title>
+        Please hire me
+    </title>
+
+    <!-- Montserrat google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+
+    <script>
+        function getEmail() {
+            let em = '(bor' + 'is.' + 'star' + 'kow@' + 'gma' + 'il.' + 'com)';
+            // document.getElementById('link').style.display = 'none';
+            document.getElementById('container').innerText = em;
+            document.getElementById('container').style.display = '';
+        }
+    </script>
 </head>
 
 <body>
-	Test <br>
-	me
+    <p>
+        Hi! I'm Boris Starkov :/
+    </p>
+
+    <p style="color: gray">
+        List of my projects will appear here someday
+    </p>
+
+    <p>
+        Meanwhile, you can <span style="color: #DCDCDC">check my CV</span>,
+        send me <a href="javascript:getEmail()" id="link">an email</a> <span id="container" style="display:none"></span>
+        or
+        follow me on <a href="https://www.instagram.com/bobabibobo">Instagram</a>
+        :P
+    </p>
+
 </body>
 
 </html>
