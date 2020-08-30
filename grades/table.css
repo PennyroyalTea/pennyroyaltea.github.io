@@ -1,0 +1,35 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: auto;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+td.succ, td.five {
+    background-color: #008000;
+}
+
+td.four {
+    background-color: #808000;
+}
+
+td.three {
+    background-color: #ff9500;
+}
+
+td.fail, td.two {
+    background-color: #ff3000;
+}
+
+td.na {
+    background-color: gray;
+}

@@ -1,0 +1,291 @@
+<html lang="en">
+<head>
+    <title>
+        My grades
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="grades.css" rel="stylesheet">
+    <link href="table.css" rel="stylesheet">
+    <script src="grades.js"></script>
+</head>
+<body onload="fillGrades(); fillGPA();">
+    <div class="GPAbox">
+        <b>GPA</b>
+        <br>
+        <span id="gpa5"></span> / 5<br>
+        <span id="gpa4"></span> / 4
+    </div>
+    <h3>Terms:</h3>
+    <!-- tab switcher -->
+    <div class="tabs">
+        <button class="tab" onclick="openTab(event, 1)">1</button>
+        <button class="tab" onclick="openTab(event, 2)">2</button>
+        <button class="tab" onclick="openTab(event, 3)">3</button>
+        <button class="tab" onclick="openTab(event, 4)" id="default">4</button>
+    </div>
+
+    <!-- tabs content -->
+    <div class="content" id="1">
+        <h3>Grades (out of 5)</h3> <br>
+        <table class="grades">
+            <tr>
+                <th>Course</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                <td>Dicrete Mathematics</td>
+                <td class="five"></td>
+            </tr>
+            <tr>
+                <td>Analysis</td>
+                <td class="five"></td>
+            </tr>
+            <tr>
+                <td>Algebra</td>
+                <td class="four"></td>
+            </tr>
+            <tr>
+                <td>Algorithms & Data Structures</td>
+                <td class="five"></td>
+            </tr>
+            <tr>
+                <td>C++</td>
+                <td class="five"></td>
+            </tr>
+        </table>
+        <h3>Credits (passed / failed)</h3> <br>
+        <table class="credits">
+            <tr>
+                <th>Course</th>
+                <th>Credit</th>
+            </tr>
+            <tr>
+                <td>Dicrete Mathematics</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>Analysis</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>Algebra</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>Algorithms & Data Structures</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>C++</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td class="succ"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="content" id="2">
+        <h3>Grades (out of 5)</h3> <br>
+        <table class="grades">
+            <tr>
+                <th>Course</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                <td>Discrete Mathematics</td>
+                <td class="three"></td>
+            </tr>
+            <tr>
+                <td>Analysis</td>
+                <td class="three"></td>
+            </tr>
+            <tr>
+                <td>Algebra</td>
+                <td class="three"></td>
+            </tr>
+            <tr>
+                <td>Algorithms & Data Structures</td>
+                <td class="five"></td>
+            </tr>
+            <tr>
+                <td>C++</td>
+                <td class="four"></td>
+            </tr>
+        </table>
+        <h3>Credits (passed / failed)</h3> <br>
+        <table class="credits">
+            <tr>
+                <th>Course</th>
+                <th>Credit</th>
+            </tr>
+            <tr>
+                <td>Discrete Mathematics</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>Analysis</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>Algebra</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>Algorithms & Data Structures</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>C++</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>Design Patterns</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td class="succ"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="content" id="3">
+        <h3>Grades (out of 5)</h3> <br>
+        <table class="grades">
+            <tr>
+                <th>Course</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                <td>Discrete Mathematics</td>
+                <td class="four"></td>
+            </tr>
+            <tr>
+                <td>Analysis</td>
+                <td class="four"></td>
+            </tr>
+            <tr>
+                <td>Algebra</td>
+                <td class="na"></td>
+            </tr>
+            <tr>
+                <td>Algorithms & Data Structures</td>
+                <td class="five"></td>
+            </tr>
+            <tr>
+                <td>Functional Programming</td>
+                <td class="na"></td>
+            </tr>
+        </table>
+        <h3>Credits (passed / failed)</h3> <br>
+        <table class="credits">
+            <tr>
+                <th>Course</th>
+                <th>Credit</th>
+            </tr>
+            <tr>
+                <td>Discrete Mathematics</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>Analysis</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>Algebra</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>Algorithms & Data Structures</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>Functional Programming</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>Kotlin</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>Hardware Architecture</td>
+                <td class="succ"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="content" id="4">
+        <h3>Grades (out of 5)</h3> <br>
+        <table class="grades">
+            <tr>
+                <th>Course</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                <td>Formal Languages</td>
+                <td class="five"></td>
+            </tr>
+            <tr>
+                <td>Complex Analysis</td>
+                <td class="four"></td>
+            </tr>
+            <tr>
+                <td>Probability Theory</td>
+                <td class="five"></td>
+            </tr>
+            <tr>
+                <td>Theory of Algorithms</td>
+                <td class="five"></td>
+            </tr>
+            <tr>
+                <td>Scala</td>
+                <td class="five"></td>
+            </tr>
+        </table>
+        <h3>Credits (passed / failed)</h3> <br>
+        <table class="credits">
+            <tr>
+                <th>Course</th>
+                <th>Credit</th>
+            </tr>
+            <tr>
+                <td>Formal Languages</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>Complex Analysis</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>Algebra</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>Probability Theory</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>Theory of Algorithms</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>Scala</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>OS Engineering</td>
+                <td class="succ"></td>
+            </tr>
+            <tr>
+                <td>German</td>
+                <td class="succ"></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        document.getElementById("default").click();
+    </script>
+</body>
+</html>
