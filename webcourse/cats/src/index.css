@@ -52,6 +52,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 1.3em;
+  font-weight: normal;
   color: #404040;
 }
 
