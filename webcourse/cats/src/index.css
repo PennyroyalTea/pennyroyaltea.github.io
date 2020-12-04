@@ -1,0 +1,109 @@
+/* checkbox styling */
+
+.page-layout {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.layout-icon::before {
+  content: "";
+  display: block;
+
+  width: 32px;
+  height: 32px;
+
+  margin: 5px auto 7px 10px;
+  background-image: url(../static/list.png);
+  background-size: 100%;
+  border: 1px red;
+}
+
+.page-layout:checked + .layout-icon::before {
+  background-image: url(../static/grid.png);
+}
+
+/* grid mode */
+
+.page-layout ~ .cat {
+  display: inline-block;
+  border: 1px solid #808080;
+  border-radius: 2px;
+
+  width: 200px;
+
+  margin: 8px 5px;
+  transition: box-shadow .25s;
+}
+
+.page-layout ~ .cat:hover {
+  box-shadow: 4px 4px 3px #999;
+}
+
+.cat-image {
+  height:150px;
+}
+
+.page-layout ~ .cat .label {
+  display: block;
+  margin: auto 5%;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 1.3em;
+  color: #404040;
+}
+
+.page-layout ~ .cat .description-brief {
+  display: block;
+  margin: 15px 5%;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1em;
+  color: #606060;
+}
+
+.page-layout ~ .cat .description-verbose {
+  display: none;
+}
+
+/*  list mode */
+
+.page-layout:checked ~ .cat {
+  display: block;
+  width: 80%;
+  min-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8px;
+}
+
+.page-layout:checked ~ .cat .cat-image {
+  display: block;
+  width: 90%;
+  height: auto;
+  margin: 15px auto;
+}
+
+.page-layout:checked ~ .cat .label {
+  display: block;
+  margin: auto 5%;
+
+  font-size: 2.5em;
+  color: #404040;
+}
+
+.page-layout:checked ~ .cat .description-brief {
+  display: none;
+}
+
+.page-layout:checked ~ .cat .description-verbose {
+  display: block;
+  margin: 15px 5%;
+
+  overflow: hidden;
+  font-size: 1.2em;
+  color: #606060;
+}
