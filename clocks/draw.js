@@ -20,7 +20,7 @@ window.onload = function () {
     var ctx = canvas.getContext("2d");
     var screenAspect = window.innerWidth / window.innerHeight;
     var layout;
-    if ((28 / 6) / screenAspect < screenAspect / (8 / 18)) {
+    if ((28 / 6) / screenAspect < screenAspect / (10 / 18)) {
         layout = new HorizontalLayout(0, 0, canvas.width, canvas.height);
     }
     else {
@@ -154,6 +154,20 @@ var Separator = /** @class */ (function (_super) {
     };
     return Separator;
 }(Segment));
+var EmptySeparator = /** @class */ (function (_super) {
+    __extends(EmptySeparator, _super);
+    function EmptySeparator() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    EmptySeparator.prototype.set = function () {
+        for (var i = 0; i < this.n; ++i) {
+            for (var j = 0; j < this.m; ++j) {
+                this.clocks[i][j].setTarget(XX[0], XX[1]);
+            }
+        }
+    };
+    return EmptySeparator;
+}(Separator));
 var RD = [0.5 * Math.PI, Math.PI];
 var RL = [0.5 * Math.PI, 1.5 * Math.PI];
 var DL = [Math.PI, 1.5 * Math.PI];
@@ -232,6 +246,7 @@ var VerticalLayout = /** @class */ (function (_super) {
         var clockSize = Math.floor(Math.min((w - gap * 7) / 8, (h - gap * 17) / 18));
         var digitW = 3 * (clockSize + gap) + clockSize;
         var digitH = 5 * (clockSize + gap) + clockSize;
+        var sepW = 2 * clockSize + gap;
         _this.segments.push(new Digit(x, y, digitW, digitH, gap, gap), new Digit(x + digitW + gap, y, digitW, digitH, gap, gap), new Digit(x, y + digitH + gap, digitW, digitH, gap, gap), new Digit(x + digitW + gap, y + digitH + gap, digitW, digitH, gap, gap), new Digit(x, y + 2 * (digitH + gap), digitW, digitH, gap, gap), new Digit(x + digitW + gap, y + 2 * (digitH + gap), digitW, digitH, gap, gap));
         return _this;
     }
